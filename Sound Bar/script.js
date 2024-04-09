@@ -10,6 +10,8 @@ sounds.forEach(sound => {
 
 // adding event listener on click to play sound when button is clicked
     btn.addEventListener('click', () => {
+        stopSongs()
+
         document.getElementById(sound).play()
     })
 
@@ -17,3 +19,13 @@ sounds.forEach(sound => {
     document.getElementById('buttons').
     appendChild(btn)
 })
+
+// function to stop a sound when other button is pressed 
+function stopSongs() {
+    sounds.forEach(sound => {
+        const song = document.getElementById(sound)
+
+        song.pause()
+        song.currentTime = 0;
+    })
+}
