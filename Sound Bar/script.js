@@ -29,3 +29,5 @@ function stopSongs() {
         song.currentTime = 0;
     })
 }
+
+alert('hello');
