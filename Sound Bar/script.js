@@ -8,6 +8,11 @@ sounds.forEach(sound => {
 
     btn.innerText = sound
 
+// adding event listener on click to play sound when button is clicked
+    btn.addEventListener('click', () => {
+        document.getElementById(sound).play()
+    })
+
 // displaying buttons
     document.getElementById('buttons').
     appendChild(btn)
